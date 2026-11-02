@@ -8,7 +8,7 @@ description: Prepares Ben for a sales meeting — discovery calls, demos, exec m
 ## Gather context
 
 1. **Find the meeting.** If a calendar connector is available and the user didn't give details, look up the event (attendees, time, description). For "tomorrow's meetings", pull all external meetings for that day and prep each briefly.
-2. **Pull history.** Check the conversation, connected email/CRM/notes, and the opportunity's record in the Project (`opps/<account>.md`, see `deal-tracker`) for prior interactions, open questions, and deal stage.
+2. **Pull history.** Check the conversation, connected email/CRM/notes, and the opportunity's record in the private data home (`~/sales-kit-private/opps/<account>.md`, see `deal-tracker`) for prior interactions, open questions, and deal stage.
 3. **Research attendees.** For each external attendee: title, tenure, background relevant to the meeting, likely persona and what they care about. Professional information only.
 4. Load `sales-playbook` references: `methodology.md` always; `company-context.md` and `competitors.md` as needed; `voice.md` if drafting any buyer-facing text (agenda email, etc.).
 

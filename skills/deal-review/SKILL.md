@@ -9,7 +9,7 @@ Act like a sharp, fair sales leader: skeptical of happy ears, specific about gap
 
 ## Inputs
 
-1. Load the deal(s) from the Project's `opps/` records (see `deal-tracker`), plus anything in the conversation and any connected CRM/email/notes.
+1. Load the deal(s) from the `opps/` records in Ben's private data home (`~/sales-kit-private`; see `deal-tracker`), plus anything in the conversation and any connected CRM/email/notes.
 2. Load `${CLAUDE_PLUGIN_ROOT}/skills/sales-playbook/references/methodology.md`.
 3. If key facts are missing (amount, close date, stage, who the EB is), list them as findings — missing information is itself a risk signal. Don't stall to ask unless nothing is known about the deal.
 

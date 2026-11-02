@@ -13,13 +13,14 @@ Deal data is confidential customer information. **Never write opportunity data t
 
 ## Where the data lives
 
-Resolve once per session, in this order:
+All paths below (`opps/...`, `prospecting/...`) are relative to Ben's **private data home**. Resolve it once per session, in this order:
 
-1. **The attached claude.ai Project** (preferred). If the session has the Projects tool, all records live there as Project docs under `opps/`. They persist across chats and devices, and only Ben can see them.
-2. **A CRM connector**, once Omni's CRM is connected: the CRM is the system of record for standard fields (stage, amount, close date); the Project records stay the working layer for notes, MEDDPICC, call history, and Claude's analysis. Never write to the CRM without Ben's approval of the specific change.
-3. **No Project available** (e.g., a session started outside the Project): say so, do the analysis, and hand Ben the exact updates to apply next time he's in the Project. Don't create a scattered copy somewhere else.
+1. **The local private folder `~/sales-kit-private`** (preferred; Ben works in Cowork). Records are plain markdown files under `~/sales-kit-private/opps/`. If the folder isn't connected yet, request access to it (`request_cowork_directory` with that path). This folder is outside the plugin repo on purpose: never move it into, or copy it to, `~/sales-kit` or any git repo.
+2. **An attached claude.ai Project**, if the session has the Projects tool and no local folder: the same paths as Project docs.
+3. **A CRM connector**, once Omni's CRM is connected: the CRM is the system of record for standard fields (stage, amount, close date); the private records stay the working layer for notes, MEDDPICC, call history, and Claude's analysis. Never write to the CRM without Ben's approval of the specific change.
+4. **No data home available**: say so, do the analysis, and hand Ben the exact updates to apply later. Don't create a scattered copy somewhere else.
 
-## Record structure (in the Project)
+## Record structure (in the private data home)
 
 | Doc | Purpose |
 |---|---|
@@ -45,7 +46,7 @@ Accept anything and figure out where it goes. Ben shouldn't have to format updat
 
 ### Rules for every update
 
-1. **Read before writing.** Always `project_read` the current record and pipeline before changing them. Never rebuild a record from memory.
+1. **Read before writing.** Always read the current record and pipeline (the file, or `project_read` in a Project) before changing them. Never rebuild a record from memory.
 2. **Show the diff.** Before saving, show a compact before → after of the fields that changed (stage, amount, close date, forecast, next step, MEDDPICC scores, contacts). For routine updates, save right after showing it. Ask first only when the update conflicts with what's recorded (e.g., notes say budget isn't approved but MEDDPICC says it's confirmed), or the change is drastic (closing a deal, deleting information).
 3. **Evidence, not optimism.** MEDDPICC scores only go up on buyer-stated evidence, and the evidence line says who said it and when.
 4. **Flag contradictions** between new input and the record at the top of the reply.
@@ -57,10 +58,10 @@ Accept anything and figure out where it goes. Ben shouldn't have to format updat
 
 - **"Where are we with {account}?"** — 5-line status: stage/forecast/amount/close date, last touch, next step, biggest MEDDPICC gap, top risk.
 - **"What needs attention?"** — deals where the next step is overdue or due within 2 days; deals with no next step; close date passed; closing in ≤30 days with paper process < 2; no update in 14+ days; Commit without a confirmed EB and champion (scores < 2). Rank by amount × urgency, with the one action for each.
-- **Pipeline summary** — totals by stage and forecast category, coverage vs. quota if known, stale deals, upcoming closes. For the numbers, save `opps/pipeline.md` locally and run `scripts/pipeline_summary.py <file>` (it reads the markdown table or a CSV) rather than adding by hand.
+- **Pipeline summary** — totals by stage and forecast category, coverage vs. quota if known, stale deals, upcoming closes. For the numbers, run `${CLAUDE_PLUGIN_ROOT}/skills/deal-tracker/scripts/pipeline_summary.py` on `opps/pipeline.md` (copy it to a scratch location first if the script can't read the data home directly) (it reads the markdown table or a CSV) rather than adding by hand.
 - **Dashboard** — when asked for a visual, build a private pipeline dashboard from the data. Never publish deal data anywhere Ben hasn't explicitly chosen.
 - **Forecast or 1:1 prep** — hand off to `deal-review`.
 
-## Setup (first use in a Project)
+## Setup (first use)
 
-If `opps/pipeline.md` doesn't exist, create the `opps/` docs from `references/pipeline-template.md` and `references/opp-template.md`, and an empty `opps/activity-log.md`. Tell Ben in one line that the tracker is ready and how to feed it.
+If `opps/pipeline.md` doesn't exist in the data home, create the `opps/` files from `references/pipeline-template.md` and `references/opp-template.md`, and an empty `opps/activity-log.md`. Tell Ben in one line that the tracker is ready and how to feed it.
