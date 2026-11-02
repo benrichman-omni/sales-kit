@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Blocks commits that look like real deal data. The repo holds the kit's
+# structure only; opportunity data lives in the private claude.ai Project.
+# Enable once per clone:  git config core.hooksPath .githooks
+bad=0
+while IFS= read -r f; do
+  case "$f" in
+    opps/*|data/*|*/opps/*) echo "blocked: $f is in a deal-data folder"; bad=1 ;;
+  esac
+  # A filled-in pipeline table row (a deal_id like ACME-202611) outside the templates
+  if [[ "$f" != skills/*/references/* && -f "$f" ]] && grep -Eq '^\| *[A-Z0-9]+(-[A-Z0-9]+)*-20[0-9]{4} *\|' "$f"; then
+    echo "blocked: $f contains what looks like a pipeline row"; bad=1
+  fi
+done < <(git diff --cached --name-only --diff-filter=ACM)
+if [ $bad -ne 0 ]; then
+  echo "Deal data stays in your private Project, not GitHub. Commit aborted."
+  exit 1
+fi

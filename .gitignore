@@ -1,0 +1,12 @@
+.DS_Store
+*.plugin
+deal-tracker.csv
+deal-activity-log.csv
+ramp-checklist.md
+
+# Deal data never lives in this repo
+/opps/
+/prospecting/
+/pipeline*.md
+/data/
+*.private.*
