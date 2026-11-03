@@ -11,10 +11,10 @@ Find 5–10 accounts that have a real reason to look at Omni right now, and hand
 
 1. Load `${CLAUDE_PLUGIN_ROOT}/skills/sales-playbook/references/company-context.md` (ICP), `competitors.md`, and `voice.md`.
 2. Load the exclusion lists from Ben's private data home (`~/sales-kit-private`, or an attached Project; see `deal-tracker` → "Where the data lives"):
-   - `opps/pipeline.md`: accounts already in pipeline
    - `prospecting/seen-accounts.md`: accounts surfaced in the last 60 days (don't repeat them unless there's a new, stronger trigger, and say so). Accounts in its "Watch list" section are not excluded; include them if they qualify and move them out of the watch list.
    - Omni customers and competitors from `company-context.md`
-3. Note the lookback window: since the last run's date in `seen-accounts.md`, or 7 days if this is the first run or a Monday.
+3. **Check every candidate in Salesforce before it makes the list** (read-only; query in `deal-tracker/references/salesforce.md`, "Account check"). Drop the account if its `Type` is Customer, Partner or Competitor, if it has an open Opportunity, or if it's owned by another active rep. Keep it if it's owned by Ben, or if there's no Account. Note anything useful (e.g., "closed-lost 12/2025, Brian Barcellona") in the entry. Once Ben's territory is loaded, prefer accounts he owns. If Salesforce isn't reachable, say so in the summary and mark each account "SF ownership unchecked."
+4. Note the lookback window: since the last run's date in `seen-accounts.md`, or 7 days if this is the first run or a Monday.
 
 ## Signals to search (public sources only)
 
@@ -33,7 +33,7 @@ Stacked triggers (e.g., funded and hiring an analytics engineer who'll use Looke
 
 - **Size: 100–500 employees** (from the ICP; confirm from the company site or a reputable source, and give a range if unsure). Drop anything clearly outside.
 - **Stack fit:** cloud warehouse evidence; incumbent BI tool or clear BI pain.
-- **Not excluded** (pipeline, seen, customer, competitor).
+- **Not excluded** (seen list, Salesforce customer/partner/competitor, open opp, or another rep's account).
 - **Trigger is recent and verified**, with a dated source link. No link means no account.
 
 ## Output

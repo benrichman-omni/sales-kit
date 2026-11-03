@@ -8,7 +8,7 @@ The **pipeline table** (`opps/pipeline.md`, "Open" section) holds the at-a-glanc
 | account | text | Company name |
 | opportunity | text | e.g., "Platform – Analytics team", "Embedded" |
 | amount | number | Annual contract value, no currency symbols; blank if unknown |
-| stage | text | `1. Discovery`, `2. Qualification`, `3. Technical Eval`, `4. Business Case`, `5. Negotiation`, `6. Closed Won`, `6. Closed Lost` (replace with Omni's stages once known) |
+| stage | text | Omni Salesforce `StageName`: `1 - Sales Ready`, `1 - Strategy`, `2 - Pre-Qual`, `3 - Qualified`, `4 - Trial`, `5 - Trial Positive`, `6 - Negotiate`, `7 - Closed Won`, `Closed Lost` |
 | forecast_category | text | `Pipeline`, `Best Case`, `Commit`, `Closed`, `Omitted` |
 | close_date | date | YYYY-MM-DD |
 | next_step | text | Specific action, never "follow up" |

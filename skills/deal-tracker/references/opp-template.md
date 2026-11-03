@@ -1,8 +1,9 @@
 # {Account} — {Opportunity name}
 
-**Stage:** 1. Discovery · **Forecast:** Pipeline · **Amount:** unknown · **Close date:** unknown
+**Salesforce:** Opportunity {006...} · Account {001...} (snapshot below mirrors Salesforce; refresh on every read)
+**Stage:** {1 - Strategy} · **Forecast:** Pipeline · **iARR:** unknown · **Close date:** unknown
 **Next step:** {action} — {YYYY-MM-DD} · **Last updated:** {YYYY-MM-DD}
-**Segment:** {SMB / Mid-market / Enterprise} · **Source:** {outbound / inbound / partner / referral}
+**Segment:** {SMB / Commercial / Enterprise} · **Source:** {outbound / inbound / partner / referral}
 
 ## Snapshot
 Two or three sentences: who they are, why they're looking, why now, and what winning looks like.

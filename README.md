@@ -43,7 +43,7 @@ The `ramp-plan` skill will help do all of this conversationally.
 
 ## Connectors that make it better
 
-Email (Gmail/Outlook) for thread context and drafts · Calendar for meeting prep and weekly plans · Google Sheets for a shared live tracker · Omni's CRM (Salesforce/HubSpot — TBD) once available · call recording (Gong etc.) for transcripts. Nothing is ever sent without explicit approval.
+Wired to Omni's stack: **Salesforce** (system of record for opportunities; every write needs Ben's approval and carries the org-required `Claude_Audit_Log__c` entry, see `skills/deal-tracker/references/salesforce.md`) · **Fathom** (call transcripts and summaries for follow-ups, meeting prep, and learning from teammates' calls) · **Amplemarket** (prospecting and sequences) · Gmail and Google Calendar · Google Sheets for a shared tracker later. Nothing is ever sent to a buyer without explicit approval.
 
 ## Roadmap (ideas for v0.2+)
 
@@ -58,6 +58,7 @@ Email (Gmail/Outlook) for thread context and drafts · Calendar for meeting prep
 
 ## Version
 
+0.5.0 — 2026-11-03. Synced to Omni's tools: Salesforce is the system of record (field map, stages, approval + audit protocol); Fathom feeds call follow-up, meeting prep and an evening sweep (`schedules/fathom-evening-sweep.md`); trigger scan, research and outbound check Salesforce ownership first; sequences formatted for Amplemarket; Omni stages in methodology.
 0.4.0 — 2026-11-02. Moved to Cowork: deal and prospecting data now live in the local private folder `~/sales-kit-private` (claude.ai Project is a fallback); trigger-scan honors the watch list and may email only Ben.
 0.3.1 — 2026-11-02. ICP size changed to 100–500 employees (Ben works accounts 100–500).
 0.3.0 — 2026-10-28. Nightly trigger scan; starter ICP (200–1,000 employees).

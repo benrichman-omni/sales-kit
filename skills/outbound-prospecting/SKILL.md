@@ -9,7 +9,8 @@ description: Writes personalized outbound prospecting — cold emails, multi-tou
 
 1. Load `${CLAUDE_PLUGIN_ROOT}/skills/sales-playbook/references/voice.md` — mandatory.
 2. Load `company-context.md` for personas and value pillars. Load `competitors.md` if an incumbent tool is known.
-3. Get the inputs. If an account brief exists in the conversation, use it. Otherwise collect the minimum: company, person (name/title), and one real, specific observation. If there's no observation, do a quick research pass (2–4 searches: recent news, the person's role/tenure, a data job posting) before writing. Never write a cold email built on nothing but their title.
+3. Check Salesforce ownership before prospecting into an account ("Account check" in `deal-tracker/references/salesforce.md`). If another rep owns it, stop and tell Ben.
+4. Get the inputs. If an account brief exists in the conversation, use it. Otherwise collect the minimum: company, person (name/title), and one real, specific observation. If there's no observation, do a quick research pass (2–4 searches: recent news, the person's role/tenure, a data job posting) before writing. Never write a cold email built on nothing but their title.
 
 ## Single cold email
 
@@ -34,7 +35,7 @@ Default sequence for enterprise and upper mid-market (adjust if the user specifi
 
 Every step must earn its place with new information or a new angle. No "bumping this to the top of your inbox."
 
-Output as a table (step, day, channel) followed by the full copy for each step. If the user will load it into a sequencing tool, also offer a CSV with columns: step, day, channel, subject, body.
+Output as a table (step, day, channel) followed by the full copy for each step. Ben's sequencing tool is **Amplemarket**. Write steps so they drop straight into an Amplemarket sequence: plain text, `{{first_name}}`/`{{company}}`-style merge fields only where the copy works without them, and email follow-ups marked "reply in thread." If the Amplemarket connector is available, offer to look up contacts or load the sequence there, and only do it after Ben approves the exact contacts and copy. Otherwise offer a CSV with columns: step, day, channel, subject, body.
 
 ## Multi-threading
 
@@ -53,4 +54,4 @@ When asked to multi-thread an account, write a coordinated set: one opener per p
 - Any product claim not in `company-context.md`? Replace with `[VERIFY: ...]`.
 - One ask only.
 
-Do not send anything. If an email connector is available, offer to save drafts, and only create drafts after the user says yes.
+Do not send anything or enroll anyone. If Gmail or Amplemarket is available, offer to save drafts or stage the sequence, and only do it after the user says yes. Adding a contact or lead to Salesforce follows the approval + audit protocol in `deal-tracker/references/salesforce.md`.

@@ -21,7 +21,7 @@ Search the web (and any connected CRM, notes, or email) for:
 - **Triggers (last 6–12 months):** funding, new exec hires (especially CDO / VP Data / CFO / CIO), layoffs, reorgs, new product lines, international expansion, IPO prep, acquisitions — anything that creates reporting or data pressure.
 - **Data stack signals:** job postings mentioning Snowflake / BigQuery / Databricks / Redshift, dbt, Looker / Tableau / Power BI / Sigma / etc.; engineering blog posts; conference talks; public GitHub. Job postings are the single best signal — read 2–3 data/analytics postings.
 - **People:** data/analytics leadership, finance leadership, RevOps/BizOps, and (for embedded) product/engineering leaders. Note tenure — new leaders in their first 90–180 days are prime.
-- **Existing relationship:** check connected CRM/email for prior touches, open/closed opps, or former customers among their staff.
+- **Existing relationship (check first):** query Salesforce for the Account (owner, `Type`, open and closed opps; "Account check" query in `deal-tracker/references/salesforce.md`). If another rep owns it, say so at the top of the brief before doing more work. Also check Gmail for prior touches and Fathom (`search_meetings` by company name) for past calls, including teammates' calls.
 
 Cite every non-obvious fact with a source link. Mark inference clearly as inference.
 

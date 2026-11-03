@@ -20,7 +20,7 @@ description: Builds Ben's weekly sales operating plan and Friday review — pipe
 
 ## Friday review
 
-- What moved: stage changes, new deals, closed deals, amount changes (from `opps/activity-log.md` in the private data home, `~/sales-kit-private`).
+- What moved: stage changes, new deals, closed deals, amount changes (from Salesforce: Ben's Opportunities with `LastModifiedDate` this week, plus `opps/activity-log.md` in `~/sales-kit-private`); calls held this week from Fathom (`recorded_by` Ben).
 - Activity vs. goal: meetings held, new touches, new opportunities.
 - What slipped and why (honest, brief).
 - Next week's first move.

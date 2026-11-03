@@ -32,13 +32,14 @@ Scoring per element: 0 = unknown, 1 = assumed/secondhand, 2 = partially confirme
 - **Tailor:** adapt to what each stakeholder values.
 - **Take control:** be comfortable pushing on next steps, process, and money.
 
-## Stage hygiene (placeholder until Omni's stages are known)
+## Stage hygiene (Omni Salesforce stages; exit criteria are working hypotheses until enablement confirms them — TODO)
 
-| Stage | Exit criteria |
+| Stage | Working exit criteria |
 |---|---|
-| 1. Discovery | Pain + impact confirmed, champion candidate identified, next meeting booked |
-| 2. Qualification | MEDDPICC ≥ 12/24, EB identified, decision process mapped |
-| 3. Technical eval / POC | Success criteria written and agreed, eval plan with dates |
-| 4. Business case / proposal | Metrics validated by EB, pricing presented, paper process started |
-| 5. Negotiation / legal | Redlines in motion, signature date agreed |
-| 6. Closed won / lost | Signed, or loss reason documented |
+| 1 - Sales Ready / 1 - Strategy | Target account and persona identified; first meeting booked |
+| 2 - Pre-Qual | Pain + impact confirmed, champion candidate identified, next meeting booked |
+| 3 - Qualified | MEDDPICC ≥ 12/24, EB identified, decision process mapped |
+| 4 - Trial | Trial success criteria written and agreed, SE engaged, eval plan with dates |
+| 5 - Trial Positive | Success criteria met and confirmed by champion; metrics validated by EB; pricing presented |
+| 6 - Negotiate | Paper process mapped, redlines in motion, signature date agreed |
+| 7 - Closed Won / Closed Lost | Signed, or loss reason and competitor chosen documented |

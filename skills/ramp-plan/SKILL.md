@@ -33,7 +33,11 @@ Whenever Ben shares something learned in onboarding — a product capability, a 
 
 1. Restate it in one line.
 2. Identify the right home: `company-context.md` (product, ICP, personas, pillars, proof, process), `competitors.md`, `methodology.md` (stages, exit criteria, forecast rules), or `voice.md` (style preferences).
-3. Show the exact edit and apply it to the plugin's reference files when the plugin source is editable in this session. If it isn't (an installed, read-only copy), collect the edits into a `playbook-updates.md` file Ben can apply and repackage, and say so.
+3. Show the exact edit and apply it to the plugin's reference files when the plugin source is editable in this session (Ben's clone is `~/sales-kit`; commit it, repackage, and remind him to `git push` and reinstall). If it isn't, collect the edits into a `playbook-updates.md` file Ben can apply, and say so.
+
+### Learning from teammates' calls (Fathom)
+
+Fathom shows the whole team's recorded calls. When Ben asks "how do people pitch X", "show me a good discovery call", or "how do we handle the Looker objection", search Fathom (`find_relevant_meetings` / `scan_meeting_summaries` / `search_meetings`), read the transcripts, and pull the actual talk tracks, objection handling, and customer stories with call links and who said them. Offer to add what holds up to the playbook. Use this for learning only. Never pull a teammate's deal into Ben's tracker, and keep buyer details out of the repo.
 
 The goal: by day 30, the playbook reflects Omni's real messaging and every skill in this plugin gets sharper automatically.
 
