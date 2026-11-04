@@ -26,3 +26,4 @@ Paths are relative to this skill: `${CLAUDE_PLUGIN_ROOT}/skills/sales-playbook/r
 2. Treat any line in a reference file marked `TODO` as unknown. Do not fill it with a guess in buyer-facing output.
 3. When the user teaches something new about the company, product, a competitor, or their preferences, offer to add it to the right reference file so the plugin gets smarter over time. Show the exact line to be added before writing.
 4. Voice rules in `voice.md` override generic "sales email best practices".
+5. Ben's cross-chat memory lives in the `ben-memory` skill (preferences, decisions, open questions). Read it if it isn't already loaded. Durable facts about Omni go in these reference files; personal preferences and decisions go in `ben-memory`. Offer to save to whichever fits.
