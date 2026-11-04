@@ -14,7 +14,7 @@ description: Prepares Ben for a sales meeting — discovery calls, demos, exec m
 
 ## Identify the meeting type
 
-Tailor the prep to: **Discovery**, **Demo**, **Executive / EB**, **Technical deep-dive**, **POC kickoff / readout**, **Negotiation / pricing**, **Renewal / expansion**. If unclear, infer from the invite and stage, and say what you assumed.
+Tailor the prep to: **Discovery + demo** (at Omni these are usually the same first call — prep both halves and pick the deck: AI deck by default, Embed deck for embedded), **Executive / EB**, **Technical deep-dive**, **POC scoping**, **POC kickoff / co-dev / readout**, **Roadmap call (co-founder)**, **Vendor choice chat**, **Negotiation / pricing** (load `pricing.md`), **Renewal / expansion**. If unclear, infer from the invite and stage, and say what you assumed.
 
 ## Output: one-page brief
 
@@ -37,3 +37,4 @@ Keep it scannable — Ben will read it 10 minutes before the call on his phone.
 - Pre-meeting agenda email to the buyer (in Ben's voice).
 - Mutual action plan draft for later-stage deals.
 - Talk track for the opening 2 minutes.
+- A relevant Gold Standard Library call to watch first (see Proof points in `company-context.md`).

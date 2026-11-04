@@ -47,7 +47,7 @@ Accept anything and figure out where it goes. Ben shouldn't have to format updat
 ### Rules for every update
 
 1. **Read before writing.** Query the current Opportunity (including `Claude_Audit_Log__c`) and read the notes file before changing either. Never rebuild a record from memory.
-2. **Show the diff, then wait.** Every Salesforce write needs Ben's OK on a before → after diff (stage, close date, forecast, next step + date, MEDDPICC fields, contacts). Batch related changes into one approval. Notes-file updates can be saved right after showing them.
+2. **Show the diff, then wait.** Every Salesforce write needs Ben's OK on a before → after diff (stage, close date, forecast, next step + date, MEDDPICC fields, contacts). Batch related changes into one approval. Notes-file updates can be saved right after showing them. For any stage change, first run the gate check in `references/salesforce.md`; if a hard gate is missing, propose the move as blocked and list the missing fields instead of writing the stage. Forecast category follows stage at Omni — don't set it on its own.
 3. **Audit every write.** Follow `references/salesforce.md` exactly: audit entry prepended to `Claude_Audit_Log__c` in the same update call. No exceptions.
 4. **Unattended runs never write to Salesforce.** They append proposals to `opps/pending-sf-updates.md` and tell Ben.
 5. **Evidence, not optimism.** MEDDPICC scores only go up on buyer-stated evidence, and the evidence line says who said it and when (cite the Fathom call).
@@ -58,7 +58,7 @@ Accept anything and figure out where it goes. Ben shouldn't have to format updat
 ## Reporting
 
 - **"Where are we with {account}?"** — 5-line status: stage/forecast/amount/close date, last touch, next step, biggest MEDDPICC gap, top risk.
-- **"What needs attention?"** — from Salesforce plus the notes files: pending Salesforce proposals awaiting approval; deals where `Next_Step_Date__c` is overdue or due within 2 days; deals with no next step; close date passed; closing in ≤30 days with paper process < 2; no update in 14+ days; Commit without a confirmed EB and champion (scores < 2). Rank by amount × urgency, with the one action for each.
+- **"What needs attention?"** — from Salesforce plus the notes files: pending Salesforce proposals awaiting approval; deals where `Next_Step_Date__c` is overdue or due within 2 days; deals with no next step; close date passed; closing in ≤30 days with paper process < 2; no update in 14+ days; Commit without a confirmed EB and champion (scores < 2); deals whose next stage is blocked by a hard gate (e.g., heading to Trial without a synced quote or Champion / Economic Buyer contact roles); deals in Trial more than 4 weeks (extensions need approval). Rank by amount × urgency, with the one action for each.
 - **Pipeline summary** — query Ben's open Opportunities from Salesforce (query in `references/salesforce.md`): totals of `iARR__c` by stage and forecast category, coverage vs. quota if known, stale deals (`LastModifiedDate` 14+ days), upcoming closes. Compute totals with code, not by hand: save the query result as CSV and run `${CLAUDE_PLUGIN_ROOT}/skills/deal-tracker/scripts/pipeline_summary.py` on it if the columns fit, or a short pandas script otherwise.
 - **Dashboard** — when asked for a visual, build a private pipeline dashboard from the data. Never publish deal data anywhere Ben hasn't explicitly chosen.
 - **Forecast or 1:1 prep** — hand off to `deal-review`.

@@ -34,9 +34,9 @@ The `schedules/` folder holds the setup for each recurring task (schedule, conne
 
 ## Customize first (week one at Omni)
 
-1. Fill the `TODO`s in `skills/sales-playbook/references/company-context.md` from enablement (ICP, personas, pillars, proof points, stages, CRM).
-2. Replace `competitors.md` working notes with official battlecards.
-3. Swap placeholder stages in `methodology.md` and `deal-tracker/references/schema.md` for Omni's.
+1. ~~Fill the `TODO`s in `skills/sales-playbook/references/company-context.md` from enablement (ICP, personas, pillars, proof points, stages, CRM).~~ Partly done in 0.6.0; ICP, personas and pillars still open.
+2. ~~Replace `competitors.md` working notes with official battlecards.~~ Done for Sigma, Hex, AI-on-the-warehouse (0.6.0).
+3. ~~Swap placeholder stages in `methodology.md` and `deal-tracker/references/schema.md` for Omni's.~~ Done (0.6.0).
 4. Tell Claude your weekly activity targets and quota so `weekly-plan` and `deal-review` can measure against them.
 
 The `ramp-plan` skill will help do all of this conversationally.
@@ -58,6 +58,7 @@ Wired to Omni's stack: **Salesforce** (system of record for opportunities; every
 
 ## Version
 
+0.6.0 — 2026-11-04. Omni protocol from the Comm Onboarding Master Reference Doc and official pricing (6.26.26): new `pricing.md` and `deal-desk.md`; Omni stage gates, trial structure and Kaizen forecasting in methodology; enablement battlecards for Sigma, Hex and AI-on-the-warehouse; Salesforce gate checks and confirmed field names; skills check gates before stage moves and use Omni negotiation rules.
 0.5.0 — 2026-11-03. Synced to Omni's tools: Salesforce is the system of record (field map, stages, approval + audit protocol); Fathom feeds call follow-up, meeting prep and an evening sweep (`schedules/fathom-evening-sweep.md`); trigger scan, research and outbound check Salesforce ownership first; sequences formatted for Amplemarket; Omni stages in methodology.
 0.4.0 — 2026-11-02. Moved to Cowork: deal and prospecting data now live in the local private folder `~/sales-kit-private` (claude.ai Project is a fallback); trigger-scan honors the watch list and may email only Ben.
 0.3.1 — 2026-11-02. ICP size changed to 100–500 employees (Ben works accounts 100–500).

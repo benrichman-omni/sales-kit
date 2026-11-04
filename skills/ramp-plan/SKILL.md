@@ -8,6 +8,8 @@ description: Guides Ben's ramp as a new AE (starting at Omni on 2026-11-02) — 
 ## 30/60/90 framework (adapt to Omni's actual onboarding once known)
 
 **Days 1–30 — Learn**
+- Days 1–5 (Omni): connect RevenueHero to Zoom + Google Calendar (inbounds won't route otherwise); set up Rippling; watch 3–4 Gold Standard Library calls, starting with StackHawk and Nicus, mostly disco/demo and POC planning; read the stage gates in `methodology.md`.
+- Weeks 1–2 (Omni): AE Onboarding Track through Demo Certification; 30 min with Joe Bertha (PS); meet Ben Froelich (Snowflake) and Madison Nelson (dbt); talk Sigma with Chris Daniel; first Kaizen forecast walkthrough with Reed.
 - Product: get hands-on daily; build a personal demo environment and a 10-minute demo story for one persona.
 - Messaging: learn the official pitch, value pillars, and top 3 customer stories cold; pass any certification.
 - Market: absorb battlecards for the top 3 competitors and the status quo.

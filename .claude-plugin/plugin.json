@@ -1,6 +1,6 @@
 {
   "name": "sales-kit-omni",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Sales workflows for an AE at Omni, from SMB to enterprise: account research, outbound prospecting, meeting prep, email replies, call follow-ups, MEDDPICC deal reviews, and a running deal tracker.",
   "author": {
     "name": "Ben"

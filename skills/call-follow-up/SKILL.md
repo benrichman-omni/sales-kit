@@ -37,9 +37,10 @@ Load `methodology.md`. Table of all eight elements: what's now known (with evide
 
 ### 4. Salesforce + notes update (via `deal-tracker`)
 
-- **Salesforce (system of record):** propose the Opportunity changes as a before → after diff: `StageName`, `CloseDate`, `NextStep` + `Next_Step_Date__c`, and the MEDDPICC text fields (`Metrics__c`, `Economic_Buyer__c`, `Decision_Criteria__c`, `Decision_Process__c`, `Identified_Pain__c`, `Competitors__c`). Write only after Ben approves, following the audit protocol in `deal-tracker/references/salesforce.md`. Never touch `iARR__c` (calculated from the quote).
-- **Local notes** (`~/sales-kit-private/opps/<account-slug>.md`): add a call-log entry (date, type, attendees, Fathom link, what was learned, objections, agreed next steps), the best short verbatim buyer quotes, champion and paper-process notes (no Salesforce field for these), and the 0–3 MEDDPICC scores.
+- **Salesforce (system of record):** propose the Opportunity changes as a before → after diff: `StageName`, `CloseDate`, `NextStep` + `Next_Step_Date__c`, and the MEDDPICC text fields (`Metrics__c`, `Economic_Buyer__c`, `Decision_Criteria__c`, `Decision_Process__c`, `Identified_Pain__c`, `Competitors__c`), plus discovery fields (`Use_Case__c`, `Data_Tools_In_Use__c`, `Database__c`, `Transformation_Tools__c`, `Scoping_Doc_Link__c`, `Positive_Feedback__c`) and contact-role proposals (Champion / Economic Buyer). Write only after Ben approves, following the audit protocol in `deal-tracker/references/salesforce.md`. Never touch `iARR__c` (calculated from the quote).
+- **Local notes** (`~/sales-kit-private/opps/<account-slug>.md`): add a call-log entry (date, type, attendees, Fathom link, what was learned, objections, agreed next steps), the best short verbatim buyer quotes, champion-testing evidence and paper-process notes, and the 0–3 MEDDPICC scores.
 - If no Opportunity exists yet, say so and offer to create one (with approval). Don't create it silently.
+- After a POC kickoff or trial call, if there's no customer Slack channel yet (Teams for Microsoft shops), remind Ben to set one up.
 
 ## Rules
 
